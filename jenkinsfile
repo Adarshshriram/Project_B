@@ -17,7 +17,7 @@ pipeline {
     stage('Install Dependencies') {
             steps {
                 // Install Node.js dependencies
-                sh 'npm install'
+                sh 'yum install npm -y'
             }
         }
         
@@ -32,7 +32,7 @@ pipeline {
     stage('Building image') {
       steps{
         script {
-          dockerImage = docker.build "${IMAGE_REPO_NAME}:${IMAGE_TAG}"
+          docker build -t jenkins-docker .
         }
       }
     }
