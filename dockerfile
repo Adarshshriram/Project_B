@@ -1,7 +1,7 @@
 FROM node:14
 
 # Setting working directory. All the path will be relative to WORKDIR
-WORKDIR /app
+WORKDIR /
 
 # Install app dependencies
 # A wildcard is used to ensure both package.json AND package-lock.json are copied
